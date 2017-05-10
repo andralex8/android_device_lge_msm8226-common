@@ -188,7 +188,9 @@ endif
 
 # TWRP
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/rootdir/sbin/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
